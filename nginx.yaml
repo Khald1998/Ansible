@@ -1,8 +1,8 @@
 ---
-- name: Install Nginx
-  hosts: all
-  remote_user: ubuntu
-  become: yes
+- name: Install Nginx                # The name of the playbook or task, which is "Install Nginx"
+  hosts: all                         # The target hosts where the playbook will be executed, in this case, all hosts
+  remote_user: ubuntu                # The remote user to connect to the hosts, in this case, 'ubuntu'
+  become: yes                        # Allows the remote user to escalate privileges to become a superuser
 
-  roles:
-  - nginx
+  roles:                             # List of roles to be executed in this playbook
+  - nginx                            # The role named 'nginx' will be executed

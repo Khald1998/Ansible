@@ -1,9 +1,10 @@
 ---
 - name: Ensure Nginx is at the latest version
-  apt:
-    name: nginx
-    state: latest
+  apt:  # Ansible module for package management in Ubuntu/Debian systems
+    name: nginx  # The name of the package to be installed or updated
+    state: latest  # Ensure that the latest version of the package is installed
+
 - name: Make sure Nginx is running
-  systemd:
-    state: started
-    name: nginx
+  systemd:  # Ansible module for managing systemd services
+    state: started  # Ensure that the service is started
+    name: nginx  # The name of the service to be managed (in this case, Nginx)
